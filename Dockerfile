@@ -1,6 +1,4 @@
-ARG REPO_LOCATION=container-registry.k8s.kdm.wcss.pl/
-ARG BASE_VERSION=v0.2
-FROM jhub-notebook-s3
+FROM container-registry.k8s.kdm.wcss.pl/hub-notebook-s3:v0.2
 #FROM jupyter/base-notebook:latest
 
 USER root
