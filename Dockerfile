@@ -2,7 +2,7 @@ FROM container-registry.k8s.kdm.wcss.pl/jhub-notebook-s3:v0.2
 #FROM jupyter/base-notebook:latest
 
 USER root
-RUN apt-get update && apt-get upgrade
+RUN apt-get update && apt-get upgrade -y
 #RUN apt-get install curl
 
 #RUN git clone https://github.com/s3fs-fuse/s3fs-fuse /s3fs
