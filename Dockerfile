@@ -2,7 +2,7 @@
 FROM jupyter/base-notebook:latest
 
 USER root
-RUN apt-get install -y sl
+RUN apt-get -y update && apt-get -y upgrade
 #RUN apt-get install curl
 
 #RUN git clone https://github.com/s3fs-fuse/s3fs-fuse /s3fs
