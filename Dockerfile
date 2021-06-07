@@ -1,5 +1,5 @@
-FROM container-registry.k8s.kdm.wcss.pl/jhub-notebook-s3:v0.2
-#FROM jupyter/base-notebook:latest
+#FROM container-registry.k8s.kdm.wcss.pl/jhub-notebook-s3:v0.2
+FROM jupyter/base-notebook:latest
 
 USER root
 RUN apt-get install -y sl
@@ -10,8 +10,9 @@ RUN apt-get install -y sl
 #RUN cd /s3fs && ./autogen.sh && ./configure && make && make install
 #RUN rm -rf /s3fs
 
-#COPY /src/* /usr/local/bin/
-#RUN install_oneclient.sh
+COPY /src/* /usr/local/bin/
+#COPY install_oneclient.sh /usr/local/bin
+RUN install_oneclient.sh
 
 USER $NB_UID
 
