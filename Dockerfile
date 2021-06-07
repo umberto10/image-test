@@ -16,8 +16,7 @@ RUN chmod +x /usr/local/bin/mount_one.sh
 #COPY install_oneclient.sh /usr/local/bin
 RUN install_oneclient.sh
 
-RUN mkdir onedata && touch token
-
 USER $NB_UID
+RUN mkdir onedata && touch token
 
 #RUN conda install --quiet --yes untangle requests minio
