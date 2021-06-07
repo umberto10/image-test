@@ -14,6 +14,8 @@ COPY /src/* /usr/local/bin/
 #COPY install_oneclient.sh /usr/local/bin
 RUN install_oneclient.sh
 
+RUN mkdir onedata
+
 USER $NB_UID
 
 #RUN conda install --quiet --yes untangle requests minio
