@@ -1,2 +1,3 @@
 #!/bin/sh
-oneclient -v 1 -H onedata.kdm.wcss.pl -t "$1" "${HOME}"/onedata
+TOKEN=$(<"${HOME}"/token)
+oneclient -v 1 -H onedata.kdm.wcss.pl -t "$TOKEN" "${HOME}"/onedata

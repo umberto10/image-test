@@ -11,10 +11,12 @@ RUN apt-get -y update && apt-get -y upgrade
 #RUN rm -rf /s3fs
 
 COPY /src/* /usr/local/bin/
+RUN chmod +x /usr/local/bin/mount_one.sh
+
 #COPY install_oneclient.sh /usr/local/bin
 RUN install_oneclient.sh
 
-RUN mkdir onedata
+RUN mkdir onedata && touch token
 
 USER $NB_UID
 
